@@ -7,9 +7,9 @@ print(setuptools.find_packages())
 
 setuptools.setup(
     name="settings_loader",
-    version="0.1.0",
-    author="Santiago Garcia Lesta",
-    author_email="santylesta@gmail.com",
+    version="0.1.1",
+    author="Tiendeo",
+    author_email="info.it@gmail.com",
     description="A small configuration_loader loader package",
     long_description=long_description,
     long_description_content_type="text/markdown",
