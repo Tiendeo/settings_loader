@@ -13,7 +13,7 @@ class JsonLoader(Base):
     def load(self):
         jsons = []
         for json_file in self.__json_files:
-            if os.path.isfile(json_file) or self.__optional:
+            if os.path.isfile(json_file) and not self.__optional:
                 with open(json_file) as f:
                     jsons.append(json.load(f))
         return jsons
