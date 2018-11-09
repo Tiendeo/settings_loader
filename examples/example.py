@@ -8,12 +8,13 @@ from configuration_loader.mergers.default import DefaultMerger
 
 
 def main():
-    json_loader = JsonLoader(["secrets/configs.json"])
+    json_loader = JsonLoader(["configs.json"])
     env_loader = EnvironmentLoader()
 
     merger = DefaultMerger()
 
     parsers = [DefaultParser()]
+    pprint(json_loader.load())
     loader = BasicLoader(parsers, merger, [env_loader, json_loader])
     loader.load()
     pprint(loader.configs)

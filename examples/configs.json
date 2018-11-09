@@ -1,0 +1,6 @@
+{
+  "parameter1":1,
+  "parameter2":{
+    "subParameter2.1":2
+  }
+}

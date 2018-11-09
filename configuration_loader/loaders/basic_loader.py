@@ -30,7 +30,12 @@ class BasicLoader(BaseLoader):
             return dictionary
 
     def __merge(self, dictionaries):
-        return reduce(self.__merger.merge, dictionaries)
+        if len(dictionaries) > 1:
+            return reduce(self.__merger.merge, dictionaries)
+        elif len(dictionaries) == 1:
+            return dictionaries[0]
+        else:
+            return {}
 
     def __rename_property(self, property_name):
         parsed_property_name = property_name
